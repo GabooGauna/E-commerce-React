@@ -27,13 +27,13 @@ const ItemCount = (props) =>{
         <br />
       <div>
         <div className='d-flex justify-content-center align-items-center'>
-          <button className='btn-light' onClick={handleSubstract}>-</button>  
-          <span>  {count}  </span>
-          <button className='btn-light' onClick={onAdd}>+</button>  
+          <button className='btn-light btn-lg' onClick={handleSubstract}>-</button>  
+          <span className='m-3'>  {count}  </span>
+          <button className='btn-light btn-lg' onClick={onAdd}>+</button>  
         </div>
       </div>   
       <div className='d-flex justify-content-center align-items-center'>
-        <button className='btn-light' onClick={handleCart}>Agregar al carrito</button>
+        <button className='btn-light btn-lg' onClick={handleCart}>Agregar al carrito</button>
       </div>
     
     </div>
