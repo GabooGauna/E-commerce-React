@@ -1,9 +1,3 @@
-.box{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(104, 5, 99);
-  text-align: center;
-  color: white;
+.itemlc{
+  background-color: rgb(109, 37, 85);
 }
