@@ -1,16 +1,9 @@
-.site-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: black;
-  padding: 10px;
+.header{
+  background-color: rgb(22, 64, 112);
 }
-.link{
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  padding: 5px;
+.header h1{
+  color: white;
 }
-.link:hover{
-  color: rgb(237, 238, 178)
+.navbar{
+  background-color: rgb(157, 189, 219);
 }
