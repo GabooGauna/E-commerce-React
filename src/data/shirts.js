@@ -3,85 +3,85 @@ const shirts = [
     "precio": 1500,
     "id": 1,
     "title": "Remera Vue.JS",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/1.jpg"
   },
   {
     "precio": 1500,
     "id": 2,
     "title": "Remera Angular.JS",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/2.jpg"
   },
   {
     "precio": 1500,
     "id": 3,
     "title": "Remera React.JS",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/3.jpg"
   },
   {
     "precio": 1500,
     "id": 4,
     "title": "Remera Redux",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/4.jpg"
   },
   {
     "precio": 1150,
     "id": 5,
     "title": "Node.JS",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/5.jpg"
   },
   {
     "precio": 1150,
     "id": 6,
     "title": "Sass",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/6.jpg"
   },
   {
     "precio": 1150,
     "id": 7,
     "title": "Remera HTML",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/7.jpg"
   },
   {
     "precio": 1150,
     "id": 8,
     "title": "Remera GitHub",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/8.jpg"
   },
   {
     "precio": 1150,
     "id": 9,
     "title": "Remera Bulma",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/9.jpg"
   },
   {
     "precio": 1150,
     "id": 10,
     "title": "Remera TypeScript",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/10.jpg"
   },
   {
     "precio": 1150,
     "id": 11,
     "title": "Remera Drupal",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/11.jpg"
   },
   {
     "precio": 1150,
     "id": 12,
     "title": "Remera Javascript",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/12.jpg"
   },
   {
     "precio": 1150,
     "id": 13,
     "title": "Remera GraphQL",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/13.jpg"
   },
   {
     "precio": 1150,
     "id": 14,
     "title": "Remera WordPress",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "/img/14.jpg"
   }
 ]
 

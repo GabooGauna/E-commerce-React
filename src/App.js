@@ -1,14 +1,16 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/index';
+// import ItemListContainer from './components/ItemListContainer/index';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetail from './components/ItemDetailContainer/ItemDetail';
 
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting='Mi catalogo' />
+      <ItemDetail id={7} />
+      {/* <ItemListContainer greeting='Mi catalogo' /> */}
       <ItemCount stock={5} initial={1}/>
     </div>
   );
