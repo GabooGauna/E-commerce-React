@@ -21,7 +21,7 @@ function ItemDetail({id}) {
   },[])
 
   return (
-      <div className="card m-auto mt-5 mb-5" style={{width: "18rem"}}>
+      <div className="card m-auto mt-5 mb-5 shadow-lg" style={{width: "18rem"}}>
         <img className="card-img-top" src={item.thumbnailUrl} alt="Card image cap" />
         <div className="card-body">
           <h5 className="card-title text-center">
