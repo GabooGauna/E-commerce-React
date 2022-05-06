@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import shirts from '../../data/shirts'
+import { useParams } from 'react-router-dom'
 
 const getShirt = (id)=>{
   return new Promise((resolve, reject)=>{
@@ -10,14 +11,15 @@ const getShirt = (id)=>{
   })
 } 
 
-function ItemDetail({id}) {
+function ItemDetail() {
+  const params = useParams();
   const [item, setItem] = useState({
     "precio": null,
     "title": null,
     "thumbnailUrl": "/"
   })
   useEffect(()=>{
-    getShirt(id).then((data)=> setItem(data))
+    getShirt(Number(params.id)).then((data)=> setItem(data))
   },[])
 
   return (

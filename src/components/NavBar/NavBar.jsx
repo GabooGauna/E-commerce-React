@@ -1,12 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css'
+
+
 
 function NavBar() {
   return (
     <>
       <header className='header p-2 container-fluid text-center'>
-          <h1 className='fw-bold'>DevShirts</h1>
+          <Link to='/'><h1 className='fw-bold'>DevShirts</h1></Link>
       </header>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
@@ -23,33 +26,46 @@ function NavBar() {
           </button>
           <div
             className="collapse navbar-collapse justify-content-center"
-            id="navbarNav"
-          >
+            id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item mx-3">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
+                <Link to='/' className='text-black'>
+                    Home
+                </Link>  
               </li>
               <li className="nav-item nav-item mx-3">
-                <a className="nav-link" href="#">
-                  Nosotros
-                </a>
+                <Link to='/category/detalles' className='text-black'>
+                    Detalle
+                </Link>  
               </li>
               <li className="nav-item nav-item mx-3">
-                <a className="nav-link " href="#">
-                  Productos
-                </a>
-              </li>
-              <li className="nav-item nav-item mx-3">
-                <a className="nav-link" href="#">
+                <Link to='/' className='text-black'>
                   <CartWidget />
-                </a>
+                </Link>  
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <div className='container-fluid categorias '>
+        <ul className='d-flex justify-content-center align-items-center m-2'>
+            <li className="nav-item nav-item mx-3">
+                <Link to='/category/masVendidos' className='text-black'>
+                    Más Vendidos
+                </Link>  
+            </li>
+            <li className="nav-item nav-item mx-3">
+                <Link to='/category/otros' className='text-black'>
+                    Otros
+                </Link>  
+            </li>
+            <li className="nav-item nav-item mx-3">
+                <Link to='/category/nuevosIngresos' className='text-black'>
+                    Nuevos Ingresos
+                </Link>  
+            </li>
+        </ul>
+      </div>
     </>
   );
 }

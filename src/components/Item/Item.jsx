@@ -1,14 +1,22 @@
 import React from 'react'
 import shirts from '../../data/shirts'
+import {Link} from 'react-router-dom'
 
 function Item( {shirt} ) {
   return (
-    <div>
-      <h3 className='text-light'>{shirt.title}</h3>
-      <p className='text-light'>{shirt.precio}</p>
-      <br/>
-      <hr/>
-    </div>
+    <div className="card m-auto mt-5 mb-5 shadow-lg" style={{width: "18rem"}}>
+        <img className="card-img-top" src={shirt.thumbnailUrl} alt="Card image cap" />
+        <div className="card-body">
+        <Link to={`/item/${shirt.id}`}>
+          <h5 className="card-title text-center">
+            {shirt.title}
+          </h5>
+        </Link>
+          <p className="card-text text-center">
+            {shirt.precio}
+          </p>
+        </div>
+      </div>
   )
 }
 

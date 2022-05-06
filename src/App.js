@@ -1,16 +1,20 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-// import ItemListContainer from './components/ItemListContainer/index';
+ import ItemListContainer from './pages/ItemListContainer/index';
 import ItemCount from './components/ItemCount/ItemCount';
-import ItemDetail from './components/ItemDetailContainer/ItemDetail';
+import ItemDetail from './pages/ItemDetailContainer/ItemDetail';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemDetail id={7} />
-      {/* <ItemListContainer greeting='Mi catalogo' /> */}
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/category/:categoryId' element={<ItemListContainer />} />
+        <Route path='/item/:id' element={<ItemDetail />} />
+      </Routes>      
       <ItemCount stock={5} initial={1}/>
     </div>
   );

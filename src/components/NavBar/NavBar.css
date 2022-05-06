@@ -7,3 +7,12 @@
 .navbar{
   background-color: rgb(157, 189, 219);
 }
+li{
+  list-style: none;
+}
+li a{
+  text-decoration: none;
+}
+header a{
+  text-decoration: none;
+}
