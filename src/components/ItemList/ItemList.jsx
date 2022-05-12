@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 
 function ItemList( {shirts} ) {
   return (
-    <div>
+    <div className='row'>
     { shirts.map( thisshirt => {
       return(
         <Item shirt={thisshirt} key={thisshirt.id} />

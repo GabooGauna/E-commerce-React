@@ -1,41 +1,36 @@
 import React, {useState} from 'react';
 
-const ItemCount = (props) =>{
-  const {stock,initial} = props; 
-  const [count, setCount] = useState(1);
+const ItemCount = ({stock, initial, onAdd}) =>{
+  const [count, setCount] = useState(initial);
 
-  function onAdd(){
-    if (count < stock){
-      setCount(count + 1)
-    }else{
-      console.log("no hay suficiente stock")
+  const onIcrease = ()=>{
+    const newValue = count + 1;
+    if(newValue <= stock){
+      setCount(newValue)
     }
-  }
+  };
 
-  function handleSubstract(){
-    setCount(count - 1)
-  }
-  
+  const onDecrease = () =>{
+    const newValue = count - 1;
+    if(newValue >= initial){
+      setCount(newValue)
+    }
+  };
 
-  function handleCart() {
-    console.log("Agregaste " + count + " productos al carro") 
-  }
-
-  return(
+  return (
     <div>
         <h1 className='text-center'>Compra tu Producto</h1>
         <br />
       <div>
         <div className='d-flex justify-content-center align-items-center'>
-          <button className='btn-light btn-lg' onClick={handleSubstract}>-</button>  
+          <button className='btn-light btn-lg' onClick={onDecrease}>-</button>  
           <span className='m-3'>  {count}  </span>
-          <button className='btn-light btn-lg' onClick={onAdd}>+</button>  
+          <button className='btn-light btn-lg' onClick={onIcrease}>+</button>  
         </div>
       </div>   
       <div className='d-flex justify-content-center align-items-center'>
-        <button className='btn-light btn-lg' onClick={handleCart}>Agregar al carrito</button>
+        <button className='btn-primary btn-lg' onClick={()=> onAdd(count)}>Agregar al carrito</button>
       </div>
-    
     </div>
   )
 }
