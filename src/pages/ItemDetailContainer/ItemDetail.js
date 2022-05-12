@@ -12,6 +12,7 @@ const getShirt = (id)=>{
 } 
 
 function ItemDetail() {
+
   const params = useParams();
   const [item, setItem] = useState({
     "precio": null,
@@ -25,6 +26,7 @@ function ItemDetail() {
   return (
       <div className="card m-auto mt-5 mb-5 shadow-lg" style={{width: "18rem"}}>
         <img className="card-img-top" src={item.thumbnailUrl} alt="Card image cap" />
+
         <div className="card-body">
           <h5 className="card-title text-center">
             {item.title}
@@ -34,6 +36,7 @@ function ItemDetail() {
           </p>
         </div>
       </div>
+      
   );
 }
 

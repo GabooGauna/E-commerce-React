@@ -3,6 +3,7 @@ import shirtsDB from '../../data/shirts';
 import ItemList from '../../components/ItemList/ItemList';
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
+import ItemCount from '../../components/ItemCount/ItemCount';
 
 function getShirts(categoryId){
   return new Promise( (resolve, reject) => {
@@ -26,11 +27,14 @@ function ItemListContainer() {
   }, [params]);
 
   return (
-    <div className='itemlc py-5 mx-auto'>
-      <div>
-      <ItemList shirts={shirts}/>
+    <>
+      <div className='itemlc py-5 mx-auto'>
+        <div>
+        <ItemList shirts={shirts}/>
+        </div>
       </div>
-    </div>
+      <ItemCount stock={5} initial={1}/>
+  </>
   )
 }
 
