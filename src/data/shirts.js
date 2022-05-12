@@ -82,20 +82,6 @@ const shirts = [
     "title": "Remera Javascript",
     "thumbnailUrl": "/img/12.jpg",
     "category": "nuevosIngresos"
-  },
-  {
-    "precio": 1150,
-    "id": 13,
-    "title": "Remera GraphQL",
-    "thumbnailUrl": "/img/13.jpg",
-    "category": "nuevosIngresos"
-  },
-  {
-    "precio": 1150,
-    "id": 14,
-    "title": "Remera WordPress",
-    "thumbnailUrl": "/img/14.jpg",
-    "category": "nuevosIngresos"
   }
 ]
 
