@@ -45,7 +45,7 @@ function ItemDetail() {
       </div>
       {cantidadDeProductos ?
                 <button><Link to='/cart'>Terminar compra ({ cantidadDeProductos } items)</Link></button> :
-                <ItemCount stock={5} initial={1}/>
+                <ItemCount stock={5} initial={1} onAdd={addHandler}/>
             }
     </>
   );
