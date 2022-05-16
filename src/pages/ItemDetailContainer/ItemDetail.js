@@ -3,6 +3,7 @@ import shirts from '../../data/shirts'
 import { useParams } from 'react-router-dom'
 import ItemCount from '../../components/ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../../context/CartContextProvider'
 
 const getShirt = (id)=>{
   return new Promise((resolve, reject)=>{
@@ -13,11 +14,15 @@ const getShirt = (id)=>{
   })
 } 
 
-function ItemDetail() {
+function ItemDetail(product) {
   const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
+  const { addToCart, cartList} = useCartContext();
+  console.log(cartList)
+
         function addHandler(quantityToAdd) {
             setCantidadDeProductos(quantityToAdd);
-        }
+            addToCart(product, quantityToAdd)
+        };
 
   const params = useParams();
   const [item, setItem] = useState({
