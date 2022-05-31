@@ -2,3 +2,11 @@ ion-icon{
   font-size: 22px;
   color: black
 }
+.units{
+  text-decoration: none;
+  color: white;
+  padding: 2px 5px;
+  font-size: 9px;
+  border-radius: 50%;
+  background-color: red;
+}
