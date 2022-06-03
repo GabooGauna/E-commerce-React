@@ -4,6 +4,7 @@ import { useCartContext } from "../../context/CartContextProvider";
 
 function Cart() {
   const { cartList, emptyCart, totalPrice } = useCartContext();
+  console.log(cartList);
   return (
     <div>
       {cartList.map((item) => (

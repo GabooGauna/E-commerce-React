@@ -33,7 +33,7 @@ const CartContextProvider = ({children}) => {
   };
 
   const totalPrice = () => {
-    return cartList.reduce((total, item) => total + item.quantity * item.price, 0);
+    return cartList.reduce((total, item) => total + item.quantity * item.precio, 0);
   };
 
   const unitsPerProduct = (id) => {

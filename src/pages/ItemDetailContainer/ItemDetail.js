@@ -14,12 +14,12 @@ const getShirt = (id)=>{
   })
 } 
 
+
 function ItemDetail(product) {
   const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
   const { addToCart, cartList} = useCartContext();
   console.log(cartList)
-
-        
+  const [loading, setLoading] = useState(true);
 
   const params = useParams();
   const [item, setItem] = useState({
@@ -28,10 +28,15 @@ function ItemDetail(product) {
     "thumbnailUrl": "/"
   })
   useEffect(()=>{
-    getShirt(Number(params.id)).then((data)=> setItem(data))
+    getShirt(Number(params.id)).then((data)=>{ 
+      setLoading(false);
+      setItem(data);
+    })
   },[])
 
   function addHandler(quantityToAdd) {
+    if(loading) return;
+    console.log(quantityToAdd, item)
     setCantidadDeProductos(quantityToAdd);
     addToCart(item, quantityToAdd)
 };
