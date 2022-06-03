@@ -19,10 +19,7 @@ function ItemDetail(product) {
   const { addToCart, cartList} = useCartContext();
   console.log(cartList)
 
-        function addHandler(quantityToAdd) {
-            setCantidadDeProductos(quantityToAdd);
-            addToCart(product, quantityToAdd)
-        };
+        
 
   const params = useParams();
   const [item, setItem] = useState({
@@ -33,6 +30,11 @@ function ItemDetail(product) {
   useEffect(()=>{
     getShirt(Number(params.id)).then((data)=> setItem(data))
   },[])
+
+  function addHandler(quantityToAdd) {
+    setCantidadDeProductos(quantityToAdd);
+    addToCart(item, quantityToAdd)
+};
 
   return (
     <>

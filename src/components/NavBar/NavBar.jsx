@@ -42,7 +42,7 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item nav-item mx-3">
-                <Link to="/" className="text-black">
+                <Link to="/cart" className="text-black">
                   {totalCount() > 0 && <CartWidget />}
                 </Link>
               </li>

@@ -2,6 +2,7 @@ import React from "react";
 import { useCartContext } from "../../context/CartContextProvider";
 
 const CartItem = ({ item }) => {
+  console.log(item);
   const { deleteById } = useCartContext();
   return (
     <div>

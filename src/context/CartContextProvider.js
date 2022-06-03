@@ -14,7 +14,7 @@ const CartContextProvider = ({children}) => {
   const addToCart = (item, quantity) => {
     if(isInCart(item.id)) {
       return setCartList(
-      cartList.map((product) => product.id === item.id ? {...product, quantity: product.quantity + quantity} : product)
+      cartList.map((product) => product.id === item.id ? {...item, quantity: product.quantity + quantity} : product)
       );
     }
 
