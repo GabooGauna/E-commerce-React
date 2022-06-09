@@ -4,6 +4,7 @@ import ItemCount from '../../components/ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContextProvider'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import "./ItemDetailContainer.css"
 
 
 
@@ -40,24 +41,26 @@ function ItemDetail(product) {
 };
 
   return (
-    <>
-      <div className="card m-auto mt-5 mb-5 shadow-lg" style={{width: "18rem"}}>
+    <div className='bg pt-5'>
+      <div className="card m-auto mt-4 p-0 mb-5 shadow-lg" style={{width: "18rem"}}>
         <img className="card-img-top" src={item.thumbnailUrl} alt="Card image cap" />
 
-        <div className="card-body">
-          <h5 className="card-title text-center">
+        <div className="card-body card-bg">
+          <h4 className="card-title text-center">
             {item.title}
-          </h5>
+          </h4>
           <p className="card-text text-center">
             {item.precio}
           </p>
         </div>
       </div>
+      <div className='d-flex justify-content-center align-items-center'>
       {cantidadDeProductos ?
-                <button><Link to='/cart'>Terminar compra ({ cantidadDeProductos } items)</Link></button> :
+                <button className='btn-primary btn-lg mt-3 mb-5 txt-btn'><Link className='enlance' to='/cart'>Terminar compra ({ cantidadDeProductos } items)</Link></button> :
                 <ItemCount stock={5} initial={1} onAdd={addHandler}/>
             }
-    </>
+      </div>
+    </div>
   );
 }
 

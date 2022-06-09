@@ -1,11 +1,11 @@
 .header{
-  background-color: rgb(22, 64, 112);
+  background-color: rgb(5, 84, 121);
 }
 .header h1{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .navbar{
-  background-color: rgb(157, 189, 219);
+  background-color: rgb(241, 234, 125);
 }
 li{
   list-style: none;
@@ -15,4 +15,7 @@ li a{
 }
 header a{
   text-decoration: none;
+}
+.categorias{
+  background-color: rgb(197, 165, 197);
 }

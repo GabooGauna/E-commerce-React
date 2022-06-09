@@ -1,0 +1,15 @@
+.card-bg{
+    background-color: rgb(155, 115, 161);
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+a:hover{
+    color:rgb(83, 36, 68);
+}
+.p-carta{
+    font-weight: bolder;
+    color: rgb(83, 36, 68);
+}

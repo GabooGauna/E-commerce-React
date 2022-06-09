@@ -51,7 +51,7 @@ function NavBar() {
         </div>
       </nav>
       <div className="container-fluid categorias ">
-        <ul className="d-flex justify-content-center align-items-center m-2">
+        <ul className="d-flex justify-content-center align-items-center m-0 p-0">
           <li className="nav-item nav-item mx-3">
             <Link to="/category/masVendidos" className="text-black">
               Más Vendidos
@@ -62,8 +62,8 @@ function NavBar() {
               Otros
             </Link>
           </li>
-          <li className="nav-item nav-item mx-3">
-            <Link to="/category/nuevosIngresos" className="text-black">
+          <li className="nav-item nav-item mx-3 ">
+            <Link to="/category/nuevosIngresos" className="text-black ">
               Nuevos Ingresos
             </Link>
           </li>
