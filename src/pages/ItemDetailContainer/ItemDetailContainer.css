@@ -11,3 +11,14 @@ span{
     color: white;
 }
 
+a:hover{
+    color: rgb(238, 215, 113);
+    transition: 0.3s;
+}
+
+h6{
+    font-weight: bold;
+}
+.card-text{
+    font-weight: bold;
+}

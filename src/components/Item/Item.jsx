@@ -16,7 +16,7 @@ function Item({ shirt }) {
       />
       <div className="card-body card-bg ">
         <Link to={`/item/${shirt.id}`}>
-          <h4 className="card-title text-center">{shirt.title}</h4>
+          <h6 className="card-title text-center">{shirt.title}</h6>
         </Link>
         <p className="card-text text-center p-carta">${shirt.precio}</p>
       </div>

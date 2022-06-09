@@ -46,9 +46,9 @@ function ItemDetail(product) {
         <img className="card-img-top" src={item.thumbnailUrl} alt="Card image cap" />
 
         <div className="card-body card-bg">
-          <h4 className="card-title text-center">
+          <h6 className="card-title text-center">
             {item.title}
-          </h4>
+          </h6>
           <p className="card-text text-center">
             {item.precio}
           </p>

@@ -6,10 +6,11 @@ a{
     color: black;
    
 }
-a:hover{
-    color:rgb(83, 36, 68);
-}
+
 .p-carta{
     font-weight: bolder;
-    color: rgb(83, 36, 68);
+
+}
+h6{
+    font-weight: bold;
 }
