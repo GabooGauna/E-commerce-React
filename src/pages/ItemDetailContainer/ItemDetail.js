@@ -50,7 +50,7 @@ function ItemDetail(product) {
             {item.title}
           </h6>
           <p className="card-text text-center">
-            {item.precio}
+            ${item.precio}
           </p>
         </div>
       </div>
