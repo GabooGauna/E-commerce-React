@@ -1,18 +1,10 @@
 import {useEffect, useState} from 'react'
-import shirts from '../../data/shirts'
 import { useParams } from 'react-router-dom'
 import ItemCount from '../../components/ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContextProvider'
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-const getShirt = (id)=>{
-  return new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      const shirt = shirts.find((el)=>el.id===id)
-      resolve(shirt);
-    },2000)
-  })
-} 
 
 
 function ItemDetail(product) {
@@ -28,10 +20,16 @@ function ItemDetail(product) {
     "thumbnailUrl": "/"
   })
   useEffect(()=>{
-    getShirt(Number(params.id)).then((data)=>{ 
+    const db = getFirestore();
+    const itemCollection = collection(db, "items");
+    getDocs(itemCollection).then((snapshot) => {
+      setItem(
+        snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        }).find(el => el.id === params.id)
+      );
       setLoading(false);
-      setItem(data);
-    })
+    });
   },[])
 
   function addHandler(quantityToAdd) {

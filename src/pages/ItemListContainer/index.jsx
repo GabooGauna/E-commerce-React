@@ -1,38 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import shirtsDB from '../../data/shirts';
-import ItemList from '../../components/ItemList/ItemList';
-import './ItemListContainer.css';
-import { useParams } from 'react-router-dom';
-
-
-function getShirts(categoryId){
-  return new Promise( (resolve, reject) => {
-    setTimeout(() =>{
-      if(!categoryId){
-        return resolve(shirtsDB)
-      }
-      const filteredShirts = shirtsDB.filter((el)=>el.category===categoryId)
-      return resolve(filteredShirts)
-    }, 2000);
-  });
-}
+import React, { useEffect, useState } from "react";
+import ItemList from "../../components/ItemList/ItemList";
+import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function ItemListContainer() {
   const params = useParams();
   const [shirts, setShirts] = useState([]);
-  useEffect( () =>{
-    getShirts(params.categoryId /*? params.categoryId : null*/).then( respuestaPromise => {
-      setShirts(respuestaPromise);
+  useEffect(() => {
+    const db = getFirestore();
+    const itemCollection = collection(db, "items");
+    getDocs(itemCollection).then((snapshot) => {
+      let dbShirts = snapshot.docs.map((doc) => {
+        return { ...doc.data(), id: doc.id };
+      });
+      if (params.categoryId) {
+        dbShirts = dbShirts.filter((el) => el.category === params.categoryId);
+      }
+      setShirts(dbShirts);
     });
   }, [params]);
 
   return (
-      <div className='itemlc py-5 mx-auto'>
-        <div>
-        <ItemList shirts={shirts}/>
-        </div>
+    <div className="itemlc py-5 mx-auto">
+      <div>
+        <ItemList shirts={shirts} />
       </div>
-  )
+    </div>
+  );
 }
 
 export default ItemListContainer;

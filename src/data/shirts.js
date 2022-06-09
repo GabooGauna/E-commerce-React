@@ -28,28 +28,28 @@ const shirts = [
     "category": "masVendidos"
   },
   {
-    "precio": 1350,
+    "precio": 1300,
     "id": 5,
     "title": "Node.JS",
     "thumbnailUrl": "/img/5.jpg",
     "category": "otros"
   },
   {
-    "precio": 1350,
+    "precio": 1300,
     "id": 6,
     "title": "Sass",
     "thumbnailUrl": "/img/6.jpg",
     "category": "otros"
   },
   {
-    "precio": 1350,
+    "precio": 1300,
     "id": 7,
     "title": "Remera HTML",
     "thumbnailUrl": "/img/7.jpg",
     "category": "otros"
   },
   {
-    "precio": 1350,
+    "precio": 1300,
     "id": 8,
     "title": "Remera GitHub",
     "thumbnailUrl": "/img/8.jpg",
