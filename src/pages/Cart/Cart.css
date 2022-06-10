@@ -1,0 +1,18 @@
+.cartcontainer{
+    background-color: rgb(83, 36, 68);
+}
+.boton{
+    background-color: rgb(85, 81, 81);
+    border: none;
+    padding: 3px;
+    border-top: 2px;
+    color: white;
+}
+.boton:hover{
+    transition: 0.5s;
+    background-color: rgb(245, 2, 2);
+    color: white;
+}
+.precio-title{
+    color: white;
+}
